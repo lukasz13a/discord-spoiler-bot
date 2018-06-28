@@ -93,7 +93,7 @@ class SpoilerBot {
             .then(() => this.client = new DiscordClient(this.config))
             .then(() => this.client.addMessageListener(this.processMessage.bind(this)))
             .then(() => this.client.loginIfNecessary())
-            .then(() => this.client.setPresence('<1>:spoiler:<2>'))
+            .then(() => this.client.setPresence(':spoiler:'))
             .then(() => Util.log('Discord Spoiler Bot is running!'))
             .catch(error => Util.error(error));
     }
