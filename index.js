@@ -6,3 +6,14 @@
  */
 
 module.exports = require('./src/SpoilerBot');
+
+'use strict';
+
+const SpoilerBot = require('./src/SpoilerBot');
+
+let config = {
+    token: process.env.BOT_TOKEN,
+};
+
+let bot = new SpoilerBot(config);
+bot.connect();
